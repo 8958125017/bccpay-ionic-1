@@ -1,0 +1,43 @@
+<ion-view view-title="Send & Receive BTC">
+
+  <ion-content class="relative-position">
+    <div class="light-blue darken-4 white-text padding">
+      <div class="row">
+        <h4 class="col white-text no-margin text-roboto"><span class="crypto-icon crypto-vault-symbol">Ƀ&nbsp;</span>{{user.BTCbalance | number:5}}</h4>
+        <img src="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl={{userBTCAddress.userBTCAddress}}" alt="QR Code" style="height: 10%; width: 10%;" ng-click="showConfirm()">
+      </div>
+      <div class="row no-margin">
+        <div class="col col-66  white-text">
+          <small style="color: #a9a9a9">Freezed BTC Balance </small><br><span class="">Ƀ&nbsp;</span>{{user.FreezedBTCbalance | number:5}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <form class="col s12 center">
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="address" type="text" ng-model="values.recieverBTCCoinAddress" >
+            <label for="address" id="focusBtcAddress">Address</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="text" ng-model="values.amount" >
+            <label for="amount" id="focusBtcAmount">Amount</label>
+          </div>
+        </div>
+        <button class="btn waves-effect waves-light light-blue darken-4 white-text" type="submit" name="action" ng-click="sendBTCCoinByUser(values)">Submit
+            <i class="material-icons right">send</i>
+          </button>
+      </form>
+    </div>
+  </ion-content>
+  <div class="fixed-action-btn ">
+    <a class="btn-floating btn-large light-blue darken-4" ng-click="scanBarCode()">
+      <i class="material-icons">camera_alt</i>
+    </a>
+  </div>
+
+
+</ion-view>

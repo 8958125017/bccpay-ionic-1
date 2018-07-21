@@ -1,0 +1,60 @@
+<ion-view view-title="Dashboard">
+  <ion-content>
+    <ion-refresher on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="light-blue darken-4 white-text padding-top padding-bottom">
+      <div class="row center no-margin">
+        <h5 class="center col white-text text-roboto">BCC/BTC Market</h5>
+      </div>
+      <div class="center row no-margin trade-div white">
+
+        <div class="col light-blue-text text-darken-4" ng-click="bidCrypto()">
+          <!-- ui-sref="app.bidcrypto"> -->
+          <span class="crypto-icon light-blue-text text-darken-4 text-roboto">Ƀ&nbsp;</span><span class="font-20 text-roboto">{{currentUserBalance.ask +.002 | number:5}}</span><br><span class="light-blue-text text-darken-4">Bid</span>
+        </div>
+        <div class="col" ng-click="askCrypto()" style="border-left: 1px solid #003967">
+          <!-- ui-sref="app.askcrypto" -->
+          <span class="crypto-icon light-blue-text text-darken-4 text-roboto">Ƀ&nbsp;</span><span class="font-20 light-blue-text text-darken-4 text-roboto">{{currentUserBalance.bid | number:5}}</span><br><span class="light-blue-text text-darken-4">Ask</span>
+        </div>
+      </div>
+    </div>
+    <div id="container" class="light-blue darken-4 white-text" style="width:100%; height:400px;color:#fff !important"></div>
+    <!-- <div class="">
+      <iframe class="highcharts-iframe" src="//cloud.highcharts.com/embed/abugas" style="border: 0; width: 100%; height: 400px"></iframe>
+    </div> -->
+    <div class="row light-blue-text text-darken-4 white padding-balance no-margin" ui-sref="app.btcvault">
+      <div class="col col-50">
+        <span>Available BTC</span><br>
+        <small style="color: #a9a9a9">Freezed&nbsp;</small>
+        <small style="color: #a9a9a9">Ƀ&nbsp;{{user.FreezedBTCbalance | number:7}}</small>
+        <!-- <h6 class="bold white-text">Freezed BTC balance : 0.012</h6> -->
+      </div>
+      <div class="col text-right ">
+        <span class="crypto-icon">Ƀ&nbsp;</span><span class="font-25">{{user.BTCbalance | number:7}}</span>
+      </div>
+    </div>
+    <hr class="no-margin">
+    <div class="row light-blue-text text-darken-4 white padding-balance no-margin" ui-sref="app.cryptovault">
+      <div class="col col-50">
+        <span>Available BCC </span><br>
+        <small style="color: #a9a9a9">Freezed&nbsp;</small>
+        <small style="color: #a9a9a9">Ƀc&nbsp;{{user.FreezedBCHbalance | number:7}}</small>
+        <!-- <h6 class="bold white-text">Freezed BTC balance : 0.012</h6> -->
+      </div>
+      <div class="col text-right">
+        <span class="crypto-icon">Ƀc&nbsp;</span><span class="font-25 font-lighter">{{user.BCHbalance | number:7}}</span>
+
+      </div>
+    </div>
+    <div class="row padding-before-footer"></div>
+  </ion-content>
+  <div class="bar bar-footer footer-height light-blue darken-3 center valign-wrapper">
+    <div class="row no-margin footer-button-line-height white-text">
+      <!-- <div class="col" ui-sref="app.buycrypto">Buy Ƀc</div> -->
+      <!-- <div class="col" ui-sref="app.sellcrypto">Sell Ƀc</div> -->
+      <div class="col" ng-click="BuyBch()">Buy Ƀc</div>
+      <div class="col" ng-click="SellBch()">Sell Ƀc</div>
+
+    </div>
+  </div>
+</ion-view>

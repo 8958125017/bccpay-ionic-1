@@ -1,0 +1,42 @@
+<ion-view view-title="Sell BCC">
+
+  <ion-content class="relative-position">
+    
+   
+    <div class="light-blue darken-4 white-text padding">
+      <div class="row">
+        <h4 class="col white-text no-margin text-roboto"><span class="crypto-icon crypto-vault-symbol">Ƀc&nbsp;</span>{{user.BCHbalance | number:5}}</h4>
+        
+      </div>
+      <div class="row no-margin">
+        <div class="col col-50  white-text">
+          <small style="color: #a9a9a9">Freezed BCC Balance </small><br><span class="">Ƀc&nbsp;</span>{{user.FreezedBCHbalance | number:5}}
+        </div>
+        <span class="pull-right valign-wrapper">1 Ƀc = {{currentPriceOfBTCtemp.bid | number:5}} Ƀ</span>
+      </div>
+    </div>
+    <div class="row ">
+      <form novalidate="novalidate " class="col s12 center ">
+
+        <div class="row ">
+          <div class="input-field col s12 ">
+            <input type="number" ng-model="sellAmount.sellAmountBCH" ng-change="myFunc1(sellAmount.sellAmountBCH) ">
+            <label for="address ">Amount of BCC</label>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="input-field col s12 ">
+            <input type="text"  decimal-places  ng-model="sellAmount.sellAmountBTC" disabled>
+            <label for="amount" id="sellCryptoFocus">Amount of BTC</label>
+          </div>
+        </div>
+        <button class="btn waves-effect waves-light light-blue darken-4 white-text " type="submit " name="action " ng-click="sellAmountAction(sellAmount) ">Submit
+          <i class="material-icons right ">send</i>
+        </button>
+      </form>
+    </div>
+
+  </ion-content>
+
+
+</ion-view>

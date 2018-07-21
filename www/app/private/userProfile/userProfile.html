@@ -1,0 +1,33 @@
+<ion-view view-title="User Profile">
+  <ion-content>
+   <form class="col s12 center">
+          <div class="profile col col-center text-center padding-top">
+            <img class="profile-picture" src="{{user.userImageUrl}}" />
+          </div>
+      <div class="row no-margin">
+        <div class="custom-input-focus-color input-field col s12">
+          <input id="address" type="text" ng-model="user.firstName"  class="validate ">
+          <label for="address">First Name</label>
+        </div>
+      </div>
+       <div class="row no-margin">
+        <div class="custom-input-focus-color input-field col s12">
+          <input id="address" type="text" ng-model="user.lastName"  class="validate ">
+          <label for="address">Last Name</label>
+        </div>
+      </div>
+       <div class="row no-margin">
+        <div class="custom-input-focus-color input-field col s12">
+          <input id="address" type="number" ng-model="user.mobileNumber"  class="validate ">
+          <label for="address">Mobile Nunber</label>
+        </div>
+      </div>
+       
+        <button class="btn waves-effect waves-light light-blue-text darken-4-text white" type="submit" name="action" ng-click="setUserprofile(user)">Get Started
+        <i class="material-icons right">send</i>
+      </button>
+
+    </form>
+   
+  </ion-content>
+</ion-view>

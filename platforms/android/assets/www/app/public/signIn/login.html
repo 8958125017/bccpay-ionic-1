@@ -1,0 +1,36 @@
+<ion-view>
+
+  <ion-content class="light-blue darken-4 ">
+    <div class="logo center padding-top">
+      <h1 class="white-text font-lighter">BccPay</h1>
+    </div>
+    <div class="padding-top padding-left">
+      <h4 class="white-text font-lighter">Hello there, <br>welcome back</h4>
+    </div>
+    <form class="col s12 center">
+
+      <div class="row">
+        <div class="custom-input-focus-color input-field col s12">
+          <input id="address" type="text" ng-model="user.email" class="white-text">
+          <label for="address">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="custom-input-focus-color input-field col s12">
+          <input id="password" type="password" ng-model="user.password" class="white-text">
+          <label for="amount">Password</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light light-blue-text darken-4-text white" type="submit" name="action" ng-click="doLogin(user)">Log me in
+        <i class="material-icons right">send</i>
+      </button>
+
+    </form>
+    <div class="row center">
+      <span class="col center white-text">Forgot Password? <a  ui-sref="forgotPassword">Get New !</a></span><br>
+    </div>
+    <div class="row center">
+      <span class="col center white-text">Don't Have Account? <a  ui-sref="signup">Signup !</a></span>
+    </div>
+  </ion-content>
+</ion-view>

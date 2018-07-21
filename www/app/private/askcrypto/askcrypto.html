@@ -1,0 +1,62 @@
+<ion-view view-title="Ask BCC">
+  <ion-content class="relative-position">
+    <div class="light-blue darken-4 white-text padding">
+      <div class="row">
+        <h4 class="col s12 white-text text-roboto">{{user.BCHbalance | number:5}} Ƀc</h4>
+      </div>
+      <div class="row">
+        <span class="col s12 white-text text-roboto">{{user.BTCbalance | number:5}} Ƀ</span>
+        <span class="pull-right text-roboto">1 Ƀc = {{currentPriceOfBTCtemp.bid | number:8}} Ƀ</span>
+      </div>
+    </div>
+    <form>
+      <div class="row no-margin ">
+        <div class="col-25 valign-wrapper">
+          <span class="valign-wrapper">Amount(BCC)</span>
+        </div>
+        <div class="col-75">
+
+          <div class="row no-margin trade">
+            <input id="amount" type="number" step="0.00001" ng-model="askCryptoAmount.askAmountBCH" class=" font-40 text-right no-border no-margin valign-wrapper" placeholder="0.00000" decimal-places>
+
+          </div>
+
+        </div>
+      </div>
+      <hr>
+      <div class="row no-margin">
+        <div class="col-25 valign-wrapper">
+          <span class="valign-wrapper">Ask Rate</span>
+        </div>
+        <div class="col-75">
+
+          <div class="row no-margin trade">
+            <input id="amount" type="number" step="0.00001" ng-model="askCryptoAmount.askRate" ng-change="myFunc(askCryptoAmount.askAmountBCH * askCryptoAmount.askRate)" class="font-40 text-right no-border no-margin valign-wrapper" placeholder="0.00000" decimal-places
+              decimal-places>
+          </div>
+
+        </div>
+      </div>
+      <hr>
+      <div class="row no-margin">
+        <div class="col-25 valign-wrapper">
+          <span class="valign-wrapper">Amount(BTC)</span>
+        </div>
+        <div class="col-75 ">
+          <div class="row no-margin trade">
+            <input id="amount" type="number" step="0.00001" class=" font-40 text-right no-border no-margin valign-wrapper" placeholder="0.00000" decimal-places value="{{askCryptoAmount.askAmountBTC | number: 5}}" disabled>
+          </div>
+
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="input-field col s12 center">
+          <button class="btn waves-effect waves-light light-blue darken-4 white-text" type="submit" name="action" ng-click="askAmountAction(askCryptoAmount)">Confirm Ask
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

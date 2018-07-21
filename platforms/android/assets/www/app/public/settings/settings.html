@@ -1,0 +1,39 @@
+<ion-view view-title="Settings">
+  <ion-content>
+    
+    <div class="list">
+      <a class="item item-divider indigo-text text-lighten-3">
+            Account
+          </a>
+      <a class="item item-icon-right">
+        <div>
+          Account verify<br>{{userMail}}
+          <span ng-click="veryfyEmail(user)" class="pull-right red-text" ng-show="user.verifyEmail==false"> Not Verified</span>
+          <span class="pull-right green-text" ng-show="user.verifyEmail==true"> Verified</span>
+        </div>
+      </a>
+      <!-- <a class="item item-divider  text-lighten-3 item-icon-right ink" ng-click="userProfile()">
+         <i class="icon ion-person-stalker"></i>
+            User Profile
+      </a> -->
+      <a class="item item-divider indigo-text text-lighten-3" href="#">
+            Security
+          </a>
+      <a class="item item-icon-right" ng-click="changeCurrentPassword()">
+            Change Password
+      </a>
+      <a class="item item-icon-right" ng-click="changeSpendingtPassword()">
+            Change Spending Password
+          </a>     
+      <a class="item item-divider indigo-text text-lighten-3">
+            App
+       </a>
+        <a class="item item-icon-right" ng-click="supports()"> 
+            Supports<br>
+      </a>
+      <a class="item item-icon-right ink" > <!-- ui-sref="app.about"> -->            
+            AboutUs<br><span class="pull-left green-text" > Version 2.0.4 </span>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

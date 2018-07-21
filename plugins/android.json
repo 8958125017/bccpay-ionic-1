@@ -1,0 +1,55 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "cordova-plugin-clipboard": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "cordova-clipboard": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "cordova-plugin-pin-dialog": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        }
+    },
+    "dependent_plugins": {
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.exampleproject915612"
+        }
+    }
+}
